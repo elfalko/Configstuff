@@ -1,0 +1,19 @@
+## Aliases for easier git usage
+
+# Setup by adding the file to ~/.bashrc
+# TODO Check if already added and drop if not
+alias gitaliases="cat << EOT >> ~/.bashrc
+# Adds git aliases if they exist
+if [ -f ~/.bash/git ]; then
+    . ~/.bash/git
+    fi
+    EOT
+    & bash"
+
+# show all stuff
+    alias sta='git status'
+# add all stuff and show that it worked
+    alias ga='git add . && sta'
+# make commits easier
+    alias gitco='git commit -m'
+
